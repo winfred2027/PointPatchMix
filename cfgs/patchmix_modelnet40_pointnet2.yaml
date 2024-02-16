@@ -1,0 +1,47 @@
+optimizer : {
+  type: Adam,
+  kwargs: {
+  lr : 0.001,
+  weight_decay : 0.0001
+}}
+
+scheduler: {
+  type: StepLR,
+  kwargs: {
+    step_size: 20,
+    gamma: 0.5
+}}
+
+dataset : {
+  name : Modelnet40,
+  train : { _base_: cfgs/dataset_configs/ModelNet40.yaml,
+            others: {subset: 'train'}},
+  val : { _base_: cfgs/dataset_configs/ModelNet40.yaml,
+            others: {subset: 'test'}},
+  test : { _base_: cfgs/dataset_configs/ModelNet40.yaml,
+            others: {subset: 'test'}}}
+
+model : {
+  NAME: PointNet2ClsMsg,
+  num_class: 40,
+  loss: smooth_loss
+}
+
+scoremodel : {
+  NAME: AttentionPointTransformerScore,
+  trans_dim: 384,
+  depth: 12,
+  drop_path_rate: 0.1,
+  cls_dim: 40,
+  num_heads: 6,
+  group_size: 32,
+  num_group: 64,
+  encoder_dims: 384,
+  mask_ratio: 0.6
+}
+
+npoints: 1024
+total_bs : 32
+step_per_update : 1
+max_epoch : 300
+grad_norm_clip : 10
