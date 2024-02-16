@@ -1,7 +1,7 @@
 # PointPatchMix: Point Cloud Mixing with Patch Scoring
 We propose PointPatchMix, a novel point cloud mixing method that operates at the patch level and integrates a patch scoring module. You can check out [paper](https://arxiv.org/abs/2303.06678) for more details.
 ![](https://github.com/winfred2027/PointPatchMix/blob/main/figures/main.png)
-The overall scheme of the PointPatchMix. (a) The original point clouds are divided into multiple patches, subsequently undergoing mask token processing and mixing. (b) A pre-trained teacher model assigns each patch with a content-based significance score. The ground truth of the mixed point cloud is ascertained by aggregating the scores of designated patches.
+**The overall scheme of the PointPatchMix.** (a) The original point clouds are divided into multiple patches, subsequently undergoing mask token processing and mixing. (b) A pre-trained teacher model assigns each patch with a content-based significance score. The ground truth of the mixed point cloud is ascertained by aggregating the scores of designated patches.
 
 # Installation
 PyTorch >= 1.7.0 < 1.11.0; python >= 3.7; CUDA >= 9.0; GCC >= 4.9; torchvision;
@@ -19,7 +19,11 @@ pip install --upgrade https://github.com/unlimblue/KNN_CUDA/releases/download/0.
 ```
 
 # Datasets
-We conduct extensive experiments on both synthetic and real-world datasets in point cloud shape classification to evaluate the effectiveness of PointPatchMix, i.e., ModelNet40 (2015) and ScanObjetNN (2019). Please download the datasets from [DATASET.md in Point-MAE]. Then, we adopt Point-MAE as our teacher model to generate the patch token scores and save the scores offline to improve training efficiency.
+We conduct extensive experiments on both synthetic and real-world datasets in point cloud shape classification to evaluate the effectiveness of PointPatchMix, i.e., ModelNet40 and ScanObjetNN. 
+
+Please download the datasets from [DATASET.md in Point-MAE](https://github.com/Pang-Yatian/Point-MAE/blob/main/DATASET.md). 
+
+Then, we adopt Point-MAE as our teacher model to generate the patch token scores and save the scores offline to improve training efficiency.
 
 # Experiments
 Train Point-MAE on ModelNet40, run:
@@ -44,7 +48,7 @@ CUDA_VISIBLE_DEVICES=<GPU> python main.py --config cfgs/<config_file> \
 ```
 
 # Acknowledgements
-Our codes are built upon [Point-MAE](https://github.com/Pang-Yatian/Point-MAE) and [PointCutMix](https://github.com/cuge1995/PointCutMix)
+Our codes are built upon [Point-MAE](https://github.com/Pang-Yatian/Point-MAE) and [PointCutMix](https://github.com/cuge1995/PointCutMix).
 
 # Citation
 If you find our code helpful, please cite our paper:
