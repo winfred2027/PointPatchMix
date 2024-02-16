@@ -2,7 +2,7 @@
 
 # Introduction
 We propose PointPatchMix, a novel point cloud mixing method that operates at the patch level and integrates a patch scoring module. You can check out [paper](https://arxiv.org/abs/2303.06678) for more details.
-!(https://github.com/winfred2027/PointPatchMix/blob/main/figures/main.png)
+![](https://github.com/winfred2027/PointPatchMix/blob/main/figures/main.png)
 
 # Installation
 PyTorch >= 1.7.0 < 1.11.0; python >= 3.7; CUDA >= 9.0; GCC >= 4.9; torchvision;
