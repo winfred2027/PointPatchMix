@@ -1,6 +1,7 @@
 # PointPatchMix: Point Cloud Mixing with Patch Scoring
 We propose PointPatchMix, a novel point cloud mixing method that operates at the patch level and integrates a patch scoring module. You can check out [paper](https://arxiv.org/abs/2303.06678) for more details.
 ![](https://github.com/winfred2027/PointPatchMix/blob/main/figures/main.png)
+
 **The overall scheme of the PointPatchMix.** (a) The original point clouds are divided into multiple patches, subsequently undergoing mask token processing and mixing. (b) A pre-trained teacher model assigns each patch with a content-based significance score. The ground truth of the mixed point cloud is ascertained by aggregating the scores of designated patches.
 
 # Installation
@@ -53,10 +54,10 @@ Our codes are built upon [Point-MAE](https://github.com/Pang-Yatian/Point-MAE) a
 # Citation
 If you find our code helpful, please cite our paper:
 ```
-@article{wang2023pointpatchmix,
+@inproceedings{wang2024pointpatchmix,
   title={PointPatchMix: Point Cloud Mixing with Patch Scoring},
   author={Wang, Yi and Wang, Jiaze and Li, Jinpeng and Zhao, Zixu and Chen, Guangyong and Liu, Anfeng and Heng, Pheng-Ann},
-  journal={arXiv preprint arXiv:2303.06678},
-  year={2023}
+  journal={Thirty-Eighth AAAI Conference on Artificial Intelligence (AAAI-24)},
+  year={2024}
 }
 ```
