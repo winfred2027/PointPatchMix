@@ -1,8 +1,13 @@
-# PointPatchMix: Point Cloud Mixing with Patch Scoring
+# PointPatchMix: Point Cloud Mixing with Patch Scoring [AAAI Conference on Artificial Intelligence [(AAAI)](https://aaai.org/aaai-conference/) 2024]
 We propose PointPatchMix, a novel point cloud mixing method that operates at the patch level and integrates a patch scoring module. You can check out [paper](https://arxiv.org/abs/2303.06678) for more details.
 ![](https://github.com/winfred2027/PointPatchMix/blob/main/figures/main.png)
 
 **The overall scheme of the PointPatchMix.** (a) The original point clouds are divided into multiple patches, subsequently undergoing mask token processing and mixing. (b) A pre-trained teacher model assigns each patch with a content-based significance score. The ground truth of the mixed point cloud is ascertained by aggregating the scores of designated patches.
+
+# Qualitative examples
+For each set of samples, the mixed point cloud (right) consists of blue and red patches, where the blue patches are randomly selected from the left object and the red patches are the corresponding complementary part from the middle object. At the bottom of the point clouds, the blue and red numbers represent the scores of these patches, while the black numbers are the percentage of the number of points.
+
+![](https://github.com/winfred2027/PointPatchMix/blob/main/figures/vis.png)
 
 # Installation
 PyTorch >= 1.7.0 < 1.11.0; python >= 3.7; CUDA >= 9.0; GCC >= 4.9; torchvision;
