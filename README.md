@@ -1,4 +1,5 @@
-# PointPatchMix: Point Cloud Mixing with Patch Scoring [AAAI Conference on Artificial Intelligence [(AAAI)](https://aaai.org/aaai-conference/) 2024]
+# PointPatchMix: Point Cloud Mixing with Patch Scoring 
+## _AAAI Conference on Artificial Intelligence [(AAAI)](https://aaai.org/aaai-conference/) 2024_
 We propose PointPatchMix, a novel point cloud mixing method that operates at the patch level and integrates a patch scoring module. You can check out [paper](https://arxiv.org/abs/2303.06678) for more details.
 ![](https://github.com/winfred2027/PointPatchMix/blob/main/figures/main.png)
 
